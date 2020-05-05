@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">GAC</string>
+    <string name="button_addPhonelist">Add Number</string>
+    <string name="hint_phonelistTitle">Phone Number</string>
+    <string name="hint_phonelistDescription">Name </string>
+    <string name="menu_addPhonelist">Add</string>
+    <string name="menu_cancelPhonelist">Cancel</string>
+    <string name="menu_deletePhonelist">Delete</string>
+    <string name="enter_phonelist_title"> Please enter a Phonelist Number </string>
+    <string name="save_phonelist"> Save Phonelist </string>
+    <string name="button_addImage"> Add Picture </string>
+    <string name="select_phonelist_image">Select phonelist Picture</string>
+    <string name="change_phonelist_image">Change phonelist Picture</string>
+    <string name="phonelist_image">phonelist Picture</string>
+    <string name="button_location">Set Location</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
