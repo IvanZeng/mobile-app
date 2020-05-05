@@ -28,6 +28,7 @@ class PhonelistMemStore : PhonelistStore, AnkoLogger {
     if (foundPhonelist != null) {
         foundPhonelist.title = phonelist.title
         foundPhonelist.description = phonelist.description
+        foundPhonelist.date = phonelist.date
         foundPhonelist.image = phonelist.image
         foundPhonelist.lat = phonelist.lat
         foundPhonelist.lng = phonelist.lng

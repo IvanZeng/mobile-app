@@ -3,7 +3,10 @@
     <string name="button_addPhonelist">Add Number</string>
     <string name="hint_phonelistTitle">Phone Number</string>
     <string name="hint_phonelistDescription">Name </string>
+    <string name="hint_date">Click to Select Date</string>
     <string name="menu_addPhonelist">Add</string>
+    <string name="start">Getting Start GEC</string>
+    <string name="welcome">Welcome to use GEC</string>
     <string name="menu_cancelPhonelist">Cancel</string>
     <string name="menu_deletePhonelist">Delete</string>
     <string name="enter_phonelist_title"> Please enter a Phonelist Number </string>

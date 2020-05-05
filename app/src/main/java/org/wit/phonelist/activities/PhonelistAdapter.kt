@@ -32,6 +32,7 @@ class PhonelistAdapter constructor(private var phonelists: List<PhonelistModel>,
     fun bind(phonelist: PhonelistModel,  listener : PhonelistListener) {
       itemView.phonelistTitle.text = phonelist.title
       itemView.description.text = phonelist.description
+      itemView.dateC.text = phonelist.date
       itemView.imageIcon.setImageBitmap(readImageFromPath(itemView.context, phonelist.image))
       itemView.setOnClickListener { listener.onPhonelistClick(phonelist) }
     }

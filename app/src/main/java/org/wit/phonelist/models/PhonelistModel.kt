@@ -7,6 +7,7 @@ import kotlinx.android.parcel.Parcelize
 data class PhonelistModel(var id: Long = 0,
                           var title: String = "",
                           var description: String = "",
+                          var date:String = "",
                           var image: String = "",
                           var lat : Double = 0.0,
                           var lng: Double = 0.0,

@@ -26,7 +26,8 @@
             android:name=".activities.MapsActivity"
             android:label="@string/title_activity_maps"></activity>
         <activity android:name=".activities.PhonelistActivity"></activity>
-        <activity android:name=".activities.PhonelistListActivity">
+        <activity android:name=".activities.PhonelistListActivity"></activity>
+        <activity android:name=".activities.PhonelistWelcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,8 +1,10 @@
 package org.wit.phonelist.activities
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.text.InputType
 import android.view.Menu
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_phonelist.*
@@ -17,6 +19,7 @@ import org.wit.phonelist.helpers.showImagePicker
 import org.wit.phonelist.main.MainApp
 import org.wit.phonelist.models.Location
 import org.wit.phonelist.models.PhonelistModel
+import java.util.*
 
 class PhonelistActivity : AppCompatActivity(), AnkoLogger {
 
@@ -39,6 +42,7 @@ class PhonelistActivity : AppCompatActivity(), AnkoLogger {
       phonelist = intent.extras.getParcelable<PhonelistModel>("phonelist_edit")
       phonelistTitle.setText(phonelist.title)
       description.setText(phonelist.description)
+      date.setText(phonelist.date)
       phonelistImage.setImageBitmap(readImageFromPath(this, phonelist.image))
       if (phonelist.image != null){
         chooseImage.setText(R.string.change_phonelist_image)
@@ -59,6 +63,7 @@ class PhonelistActivity : AppCompatActivity(), AnkoLogger {
     btnAdd.setOnClickListener() {
       phonelist.title = phonelistTitle.text.toString()
       phonelist.description = description.text.toString()
+      phonelist.date = date.text.toString()
 
       if (phonelist.title.isEmpty()) {
         toast(R.string.enter_phonelist_title)
@@ -76,9 +81,28 @@ class PhonelistActivity : AppCompatActivity(), AnkoLogger {
 
     chooseImage.setOnClickListener {
       showImagePicker(this, IMAGE_REQUEST)
+
+  }
+
+    val c = Calendar.getInstance()
+    val year = c.get(Calendar.YEAR)
+    val month = c.get(Calendar.MONTH)
+    val day = c.get(Calendar.DAY_OF_MONTH)
+    date.setRawInputType(InputType.TYPE_NULL)
+    //button click to show DatePickerDialog
+    date.setOnClickListener{
+      val dpd = DatePickerDialog(this,
+        DatePickerDialog.OnDateSetListener{ view, mYear, mMonth, mDay ->
+          //set to edit text
+          date.setText(""+mYear+"-"+(mMonth+1)+"-"+mDay)
+        },year,month,day)
+      //show dialog
+      dpd.show()
     }
 
   }
+
+
 
   override fun onCreateOptionsMenu(menu: Menu?): Boolean {
     menuInflater.inflate(R.menu.menu_phonelist, menu)

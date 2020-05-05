@@ -69,6 +69,26 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="14sp" />
 
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:hint="@string/hint_date"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:maxLength="25"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:id="@+id/phonelistImage"
+                    android:contentDescription="@string/phonelist_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/ic_launcher" />
+
                 <Button
                     android:id="@+id/chooseImage"
                     android:layout_width="match_parent"
@@ -80,13 +100,6 @@
                     android:text="@string/button_addImage"
                     android:textColor="@color/colorPrimary"
                     android:textSize="16sp" />
-
-                <ImageView
-                    android:id="@+id/phonelistImage"
-                    android:contentDescription="@string/phonelist_image"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@mipmap/ic_launcher" />
 
                 <Button
                     android:id="@+id/phonelistLocation"
@@ -113,6 +126,7 @@
                     android:text="@string/button_addPhonelist"
                     android:textColor="@color/colorPrimary"
                     android:textSize="16sp" />
+
             </LinearLayout>
         </ScrollView>
 
